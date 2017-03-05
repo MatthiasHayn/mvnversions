@@ -9,6 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,6 +25,7 @@ public class App {
         private String artifactId;
         private String version;
         private boolean optional;
+        private String scope;
 
         public String getGroupId() {
             return groupId;
@@ -57,6 +59,14 @@ public class App {
             this.optional = optional;
         }
 
+        public String getScope() {
+            return scope;
+        }
+
+        public void setScope(String scope) {
+            this.scope = scope;
+        }
+
         @Override
         public String toString() {
             return "Dependency{" +
@@ -64,11 +74,34 @@ public class App {
                     ", artifactId='" + artifactId + '\'' +
                     ", version='" + version + '\'' +
                     ", optional=" + optional +
+                    ", scope='" + scope + '\'' +
                     '}';
         }
 
         public String versionString() {
             return "<" + artifactId + ".version>" + version + "</" + artifactId + ".version>";
+        }
+
+        private String element(String name, String content) {
+            if (content == null) {
+                return "";
+            }
+            return "<" + name + ">" + content + "</" + name + ">";
+        }
+
+        public String dependencyString() {
+            StringBuilder sb = new StringBuilder();
+            sb.append("<dependency>\r\n");
+            sb.append("\t").append(element("groupId", groupId)).append("\r\n");
+            sb.append("\t").append(element("artifactId", artifactId)).append("\r\n");
+            String vs = "${" + artifactId  + ".version" + "}";
+            sb.append("\t").append(element("version", vs)).append("\r\n");
+            if (scope != null)
+                sb.append("\t").append(element("scope", scope)).append("\r\n");
+            if (optional)
+                sb.append("\t").append(element("optional", Boolean.toString(optional))).append("\r\n");
+            sb.append("</dependency>\r\n");
+            return sb.toString();
         }
 
         @Override
@@ -110,6 +143,8 @@ public class App {
                 dep.setVersion(sb.toString());
             } else if (qName.equals("optional")) {
                 dep.setOptional(Boolean.parseBoolean(sb.toString()));
+            } else if (qName.equals("scope")) {
+                dep.setScope(sb.toString());
             }
         }
 
@@ -129,14 +164,20 @@ public class App {
         DefaultHandler handler = new PomHandler();
         saxParser.parse(file, handler);
         Collections.sort(dependencyList);
+
         for (Dependency dep:dependencyList) {
             System.out.println(dep.versionString());
         }
+        for (Dependency dep:dependencyList) {
+            System.out.println(dep.dependencyString());
+        }
+
     }
 
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
         App app = new App();
         app.scanDependenciesAndCreateVersionTags();
+
 
     }
 }

@@ -1,0 +1,405 @@
+<dependency>
+	<groupId>javax.activation</groupId>
+	<artifactId>activation</artifactId>
+	<version>${activation.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>aopalliance</groupId>
+	<artifactId>aopalliance</artifactId>
+	<version>${aopalliance.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>asm</groupId>
+	<artifactId>asm</artifactId>
+	<version>${asm.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>asm</groupId>
+	<artifactId>asm-commons</artifactId>
+	<version>${asm-commons.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>asm</groupId>
+	<artifactId>asm-util</artifactId>
+	<version>${asm-util.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.aspectj</groupId>
+	<artifactId>aspectjrt</artifactId>
+	<version>${aspectjrt.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.aspectj</groupId>
+	<artifactId>aspectjweaver</artifactId>
+	<version>${aspectjweaver.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.axis</groupId>
+	<artifactId>axis</artifactId>
+	<version>${axis.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>backport-util-concurrent</groupId>
+	<artifactId>backport-util-concurrent</artifactId>
+	<version>${backport-util-concurrent.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.beanshell</groupId>
+	<artifactId>bsh</artifactId>
+	<version>${bsh.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>c3p0</groupId>
+	<artifactId>c3p0</artifactId>
+	<version>${c3p0.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>tomcat</groupId>
+	<artifactId>catalina</artifactId>
+	<version>${catalina.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>cglib</groupId>
+	<artifactId>cglib-nodep</artifactId>
+	<version>${cglib-nodep.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.bea.wlplatform</groupId>
+	<artifactId>commonj-twm</artifactId>
+	<version>${commonj-twm.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-attributes</groupId>
+	<artifactId>commons-attributes-api</artifactId>
+	<version>${commons-attributes-api.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-attributes</groupId>
+	<artifactId>commons-attributes-compiler</artifactId>
+	<version>${commons-attributes-compiler.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-beanutils</groupId>
+	<artifactId>commons-beanutils</artifactId>
+	<version>${commons-beanutils.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-collections</groupId>
+	<artifactId>commons-collections</artifactId>
+	<version>${commons-collections.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-dbcp</groupId>
+	<artifactId>commons-dbcp</artifactId>
+	<version>${commons-dbcp.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-fileupload</groupId>
+	<artifactId>commons-fileupload</artifactId>
+	<version>${commons-fileupload.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-httpclient</groupId>
+	<artifactId>commons-httpclient</artifactId>
+	<version>${commons-httpclient.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-logging</groupId>
+	<artifactId>commons-logging</artifactId>
+	<version>${commons-logging.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-pool</groupId>
+	<artifactId>commons-pool</artifactId>
+	<version>${commons-pool.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.resource</groupId>
+	<artifactId>connector-api</artifactId>
+	<version>${connector-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>net.sf.ehcache</groupId>
+	<artifactId>ehcache</artifactId>
+	<version>${ehcache.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.ejb</groupId>
+	<artifactId>ejb</artifactId>
+	<version>${ejb.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>org.freemarker</groupId>
+	<artifactId>freemarker</artifactId>
+	<version>${freemarker.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.codehaus.groovy</groupId>
+	<artifactId>groovy</artifactId>
+	<version>${groovy.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.caucho</groupId>
+	<artifactId>hessian</artifactId>
+	<version>${hessian.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate</artifactId>
+	<version>${hibernate.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-entitymanager</artifactId>
+	<version>${hibernate-entitymanager.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.ibatis</groupId>
+	<artifactId>ibatis-sqlmap</artifactId>
+	<version>${ibatis-sqlmap.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.lowagie</groupId>
+	<artifactId>itext</artifactId>
+	<version>${itext.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.jamonapi</groupId>
+	<artifactId>jamon</artifactId>
+	<version>${jamon.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>jasperreports</groupId>
+	<artifactId>jasperreports</artifactId>
+	<version>${jasperreports.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.xml</groupId>
+	<artifactId>jaxrpc-api</artifactId>
+	<version>${jaxrpc-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax.jdo</groupId>
+	<artifactId>jdo2-api</artifactId>
+	<version>${jdo2-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax.jms</groupId>
+	<artifactId>jms</artifactId>
+	<version>${jms.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>jotm</groupId>
+	<artifactId>jotm</artifactId>
+	<version>${jotm.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.jruby</groupId>
+	<artifactId>jruby</artifactId>
+	<version>${jruby.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.faces</groupId>
+	<artifactId>jsf-api</artifactId>
+	<version>${jsf-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>jsp-api</artifactId>
+	<version>${jsp-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>jstl</artifactId>
+	<version>${jstl.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax.transaction</groupId>
+	<artifactId>jta</artifactId>
+	<version>${jta.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version>${junit.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>jexcelapi</groupId>
+	<artifactId>jxl</artifactId>
+	<version>${jxl.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>log4j</groupId>
+	<artifactId>log4j</artifactId>
+	<version>${log4j.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.mail</groupId>
+	<artifactId>mail</artifactId>
+	<version>${mail.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>com.oracle</groupId>
+	<artifactId>oc4j</artifactId>
+	<version>${oc4j.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.persistence</groupId>
+	<artifactId>persistence-api</artifactId>
+	<version>${persistence-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi</artifactId>
+	<version>${poi.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.portlet</groupId>
+	<artifactId>portlet-api</artifactId>
+	<version>${portlet-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>opensymphony</groupId>
+	<artifactId>quartz-all</artifactId>
+	<version>${quartz-all.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>servlet-api</artifactId>
+	<version>${servlet-api.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>taglibs</groupId>
+	<artifactId>standard</artifactId>
+	<version>${standard.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>struts</groupId>
+	<artifactId>struts</artifactId>
+	<version>${struts.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.tiles</groupId>
+	<artifactId>tiles-api</artifactId>
+	<version>${tiles-api.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.tiles</groupId>
+	<artifactId>tiles-core</artifactId>
+	<version>${tiles-core.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.tiles</groupId>
+	<artifactId>tiles-jsp</artifactId>
+	<version>${tiles-jsp.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.oracle.toplink</groupId>
+	<artifactId>toplink</artifactId>
+	<version>${toplink.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.oracle</groupId>
+	<artifactId>toplink-essentials</artifactId>
+	<version>${toplink-essentials.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>velocity</groupId>
+	<artifactId>velocity</artifactId>
+	<version>${velocity.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>velocity-tools</groupId>
+	<artifactId>velocity-tools-generic</artifactId>
+	<version>${velocity-tools-generic.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>velocity-tools</groupId>
+	<artifactId>velocity-tools-view</artifactId>
+	<version>${velocity-tools-view.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>com.experlog</groupId>
+	<artifactId>xapool</artifactId>
+	<version>${xapool.version}</version>
+</dependency>
+
+

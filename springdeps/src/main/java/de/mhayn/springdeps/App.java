@@ -8,6 +8,8 @@ import java.util.*;
 
 public class App {
     private static final String pomSourceFolder = "d:\\daten\\develop\\pdfbox\\pdfbox-trunk";
+
+
     private List<Pom> poms = new ArrayList<>();
     private Map<String, Pom> pomsByName = new HashMap<>();
 
@@ -56,6 +58,7 @@ public class App {
 
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
         App app = new App();
+
         app.scanPoms(null);
         app.buildTree();
 

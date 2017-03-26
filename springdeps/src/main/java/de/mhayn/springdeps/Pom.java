@@ -9,6 +9,8 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +43,11 @@ public class Pom extends DefaultHandler {
     public Pom(String fileName) {
         this.fileName = fileName;
         try {
+            this.source = new String(Files.readAllBytes(Paths.get(fileName)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
             scanPom();
             if (groupId == null) {
                 groupId = parentGroupId;
@@ -48,6 +55,12 @@ public class Pom extends DefaultHandler {
             System.out.println(fileName);
             System.out.println("Name: " + nameAsKey());
             System.out.println("Parent: " + parentAsKey());
+            String s = stripDependencies();
+            if (s.contains("<dependency>")) {
+                System.out.println(s);
+            }
+            else
+                System.out.println(insertDependencies(s));
 
             System.out.println(dependencies);
         } catch (ParserConfigurationException e) {
@@ -152,6 +165,49 @@ public class Pom extends DefaultHandler {
     @Override
     public void characters(char[] ch, int start, int length) {
         sb.append(ch, start, length);
+    }
+
+    // quick and dirty...
+    private String stripDependencies() {
+        StringBuilder sb = new StringBuilder();
+        String fourBlanks = "    ";
+        String untabbedSource = source.replace("\t", fourBlanks);
+        String[] comps = untabbedSource.split(" ");
+        boolean leaveOut = false;
+        for (String s:comps) {
+            String trimmed = "";
+            if (s.contains("dependencies")) {
+                trimmed = s;
+
+            }
+            if (s.trim().equals("<dependencies>")) {
+                leaveOut = true;
+                sb.append(s);
+            }
+            else if (s.trim().equals("</dependencies>")) {
+                leaveOut = false;
+            }
+            if (!leaveOut) {
+                sb.append(s).append(" ");
+            }
+        }
+        return sb.toString().trim().replace(fourBlanks, "\t");
+    }
+
+    private String insertDependencies(String pomTxt) {
+        StringBuilder sb = new StringBuilder();
+        String[] comps = source.split(" ");
+        for (String s:comps) {
+            if (s.trim().equals("<dependencies>")) {
+                sb.append(s).append("\r\n");
+                for (Dependency dep:dependencies) {
+                    sb.append(dep.dependencyString());
+                }
+            }
+            else
+                sb.append(s).append(" ");
+        }
+        return sb.toString().trim();
     }
 
 }
